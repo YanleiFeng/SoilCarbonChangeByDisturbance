@@ -59,14 +59,20 @@ Workflow Overview:
     Loads fire disturbance dates and filtered soil chemistry data.
 
     2. Validate Plots with Disturbance Dates
-    Not all plots have SOC data on the dates that disturbance happen, so the workflow includes steps that iterates through sites to match plots with valid disturbance dates and chemistry   measurements. 
+    Not all plots have SOC data on the dates that disturbance happen, so the workflow includes 
+    steps that iterates through sites to match plots with valid disturbance dates and chemistry measurements. 
     
     Filters out plots without valid data or usable timestamps.
 
-    3. Define Plot-level SOC Analysis Function, this is a reusable function that performs year-wise aggregation of SOC before and after the fire for each plot, and it handles multiple measurements and temporal gaps.
+    3. Define Plot-level SOC Analysis Function, this is a reusable function that performs year-wise aggregation of 
+    SOC before and after the fire for each plot, and it handles multiple measurements and temporal gaps.
     # Filters chemistry data by plot
-    # Aligns data relative to fire year, a 10-20 year time offset has been used here, which means this script will record all the SOC 10 years before the disturbance dates and 20 years after the disturbance dates (There could be multiple same type of disturbances happen in a similar time period, so the SOC_before is calculated before the earliest disturbance and SOC_after is calculated after the latest disturbance time).
-    # Group the SOC by Organic layer and Mineral layer (Calculates average organic C percent for each year before and after the disturbance, separately for M and O horizons.)
+    # Aligns data relative to fire year, a 10-20 year time offset has been used here, which means this script will 
+    record all the SOC 10 years before the disturbance dates and 20 years after the disturbance dates (There could be 
+    multiple same type of disturbances happen in a similar time period, so the SOC_before is calculated before the 
+    earliest disturbance and SOC_after is calculated after the latest disturbance time).
+    # Group the SOC by Organic layer and Mineral layer (Calculates average organic C percent for each year before and 
+    after the disturbance, separately for M and O horizons.)
     # Aggregates SOC annually and also record
     # Returns summary (e.g., mean SOC by year offset)
     

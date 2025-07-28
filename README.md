@@ -2,7 +2,9 @@
 This is a developing script for understanding soil changes under multiple disturbance using NEON datasets.
 
 Script 1: NEON_accessData_DISTURBANCEname.ipynb
-Purpose: To extract site and chemical data from NEON datasets related to this type of disturbances and save relevant subsets for downstream analysis.
+
+Purpose: To extract site and chemical data from NEON datasets related to this type of disturbances and save relevant subsets for downstream analysis. This documentation uses fire disturbance as an example hereafter
+
 Input Files:
 eventType.csv	NEON metadata on disturbance events
 sls_chemistry.csv	NEON soil chemistry measurements across sites
@@ -17,7 +19,7 @@ Workflow Overview
     File: eventType.csv
     Operation: Read all disturbance events recorded by NEON.
 
-    2. Filter for disturbance Events, use fire disturbance as an example hereafter. All the other disturbances follow the similar process
+    2. Filter for disturbance Events. All the other disturbances follow the similar process
     Filters events where eventType == "fire".
 
     3. Export Fire Event Records
@@ -37,6 +39,7 @@ Workflow Overview
     Saves filtered soil chemistry to slsChemistry_fire_disturbance.csv.
 
 Notebook 2: SoilOrganicCarbon_byFireDisturbance-byPlot-yearlyAfter.ipynb
+
 Purpose: To assess the impact of fire disturbances on soil organic carbon (SOC) at individual plots within NEON sites by:
 1. Linking fire events to site-specific soil chemistry data
 2. Filtering valid plots with known disturbance dates

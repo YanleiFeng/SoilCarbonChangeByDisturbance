@@ -1,4 +1,4 @@
-# SoilCarbonChangeByDisturbance
+# Soil Carbon Change By Disturbance
 This is a developing script for understanding soil changes under multiple disturbance using NEON datasets.
 
 Script 1: NEON_accessData_DISTURBANCEname.ipynb
